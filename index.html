@@ -230,6 +230,8 @@
         font-size: 16px;
       }
 
+   
+
       .banner-section .text-overlay {
         left: 20px;
         right: 20px;
@@ -238,14 +240,43 @@
     }
 
     @media (max-width: 480px) {
+
       .card {
         flex-direction: column;
         text-align: center;
+      }
+      .hero-section img.bg-img{
+        height: 700px;
+      }
+
+      .logo img.ctaimg {
+        display: none;
       }
 
       .card img {
         margin-bottom: 10px;
       }
+      .cta-section {
+        height: 200vh;
+      }
+      .cta-section img.bg {
+        height: 200vh;
+      }
+      .banner-section .text-overlay h1
+      {
+       text-align: center;
+       margin-top: -70vw;
+       font-size: 32px;
+      }
+
+      .banner-section .text-overlay button {
+      margin-left: 25vw;
+      }
+
+      .centered-content {
+      margin-top: -40vw;
+      }
+
     }
   </style>
 </head>
@@ -260,7 +291,7 @@
         <h1>i cleaner</h1>
         <p>One tap to free up space! Try i cleaner</p>
         <button onclick="window.location.href='https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383'">Get the App</button>
-        <img src="ctaimg.png" alt="Promo" />
+        <img src="ctaimg.png" alt="Promo" class="ctaimg" />
       </div>
     </div>
   </div>
@@ -328,14 +359,18 @@
   <!-- Feature Cards Section -->
 
 
-  <!-- Banner Section -->
-  <div class="banner-section">
+<!-- Banner Section -->
+<div class="banner-section">
+  <picture>
+    <source media="(max-width: 480px)" srcset="bannermob.png" />
     <img src="banner.png" alt="CTA 3" />
-    <div class="text-overlay">
-      <h1>Get the Cleaner AI and make your phone clean & Tidy</h1>
-      <button onclick="window.location.href='https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383'">Get the App</button>
-    </div>
+  </picture>
+  <div class="text-overlay">
+    <h1>Get the Cleaner AI and make your phone clean & Tidy</h1>
+    <button onclick="window.location.href='https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383'">Get the App</button>
   </div>
+</div>
+
 
   <!-- Footer -->
   <footer>
