@@ -15,17 +15,18 @@
     .hero-section {
       position: relative;
       width: 100%;
+    
     }
 
     .hero-section img.bg-img {
       width: 100%;
-      height: auto;
+      height: 100vh;
       display: block;
     }
 
     .centered-content {
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
@@ -36,7 +37,11 @@
       padding: 0 20px;
       width: 100%;
       max-width: 500px;
+        margin-top: 10vw;
     }
+   .app-button{
+    margin-left: 6vw;
+   }
 
     .logo img:first-child {
       width: 48px;
@@ -160,7 +165,7 @@
     }
 
     .card.tall img {
-      width: 150px;
+      width: 300px;
       height: 150px;
       margin-bottom: 10px;
     }
@@ -180,18 +185,18 @@
       border-radius: 10px;
     }
 
+   
     .banner-section .text-overlay {
       position: absolute;
-      left: 300px;
-      top: 50%;
-      transform: translateY(-60%);
+      margin-right: 15vw;
+      margin-top: 5vw;
       color: white;
       max-width: 420px;
     }
 
     .banner-section h1 {
       font-size: 32px;
-      margin-bottom: 20px;
+  
     
     }
 
@@ -237,6 +242,21 @@
         right: 20px;
         max-width: none;
       }
+      .banner-section .text-overlay h1
+      {
+       text-align: center;
+       margin-top: -70vw;
+       font-size: 32px;
+      }
+
+      .banner-section .text-overlay button {
+      margin-left: 25vw;
+      }
+
+      .centered-content {
+      margin-top: -40vw;
+      }
+    
     }
 
     @media (max-width: 480px) {
@@ -246,9 +266,16 @@
         text-align: center;
       }
       .hero-section img.bg-img{
-        height: 700px;
+        height: 100vh;
       }
-
+       
+      .logo  {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 100vw;
+      }
+       
       .logo img.ctaimg {
         display: none;
       }
@@ -265,18 +292,20 @@
       .banner-section .text-overlay h1
       {
        text-align: center;
-       margin-top: -70vw;
-       font-size: 32px;
+       margin-top: 10vw;
+       font-size: 24px;
       }
 
       .banner-section .text-overlay button {
-      margin-left: 25vw;
+      margin-left: 20vw;
       }
 
       .centered-content {
       margin-top: -40vw;
       }
-
+      .app-button{
+        margin-left: 20vw;
+      } 
     }
   </style>
 </head>
@@ -284,14 +313,17 @@
 
   <!-- Hero Section -->
   <div class="hero-section">
-    <img src="cta.png" alt="Hero Background" class="bg-img" />
+    <img src="homeweb.webp" alt="Hero Background" class="bg-img" />
     <div class="centered-content">
       <div class="logo">
-        <img src="logo.png" alt="Logo Icon" />
+        <img src="logo.webp" alt="Logo Icon" />
         <h1>i cleaner</h1>
         <p>One tap to free up space! Try i cleaner</p>
-        <button onclick="window.location.href='https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383'">Get the App</button>
-        <img src="ctaimg.png" alt="Promo" class="ctaimg" />
+        <div style="width: 151px;height: 45px;background-color: #ffffff;border-radius: 30px;display: flex;justify-content: center;align-items: center;font-size: 16px;font-weight: 600;gap: 20px;" class="app-button">
+           <a href="https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383" style="text-decoration: none;color: #000000;">Get the App
+        </div>
+         <img src="iphone.webp" alt="Promo" class="ctaimg" />
+       
       </div>
     </div>
   </div>
@@ -300,29 +332,40 @@
   <div class="cta-section">
     <img src="cta2.png" alt="Secondary Banner" class="bg" />
     <div class="cta-overlay">
-      <div style="display: flex;justify-content: space-between;">
-       <img src="logotag.png" alt="Logo Tag" />
-      <button onclick="window.location.href='https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383'">Get the App</button>
-      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; position: sticky; top: 10px; left: 0; right: 0; padding: 10px 20px; background-color: transparent; z-index: 999;">
+  
+  <!-- Logo -->
+  <div>
+    <img src="logotag.png" alt="Logo Tag" style="height: 40px;" />
+  </div>
+
+  <!-- Button -->
+  <a href="https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383" 
+     style="display: flex; justify-content: center; align-items: center; width: 113px; height: 38px; background-color: #ffffff; border-radius: 39px; font-size: 14px; font-weight: 600; color: #000000; text-decoration: none;">
+    Get the App
+  </a>
+
+</div>
+
       
     <div class="feature-cards">
     <div class="feature-column">
       <div class="card">
-        <img src="01.png" alt="Feature Icon" />
+        <img src="secret.webp" alt="Feature Icon" />
         <div>
           <h3>Secure photos and videos</h3>
           <p>Protect personal photos and videos in a secure space.</p>
         </div>
       </div>
       <div class="card">
-        <img src="Group 37.png" alt="Feature Icon" />
+        <img src="duplicates.webp" alt="Feature Icon" />
         <div>
           <h3>Remove duplicate files</h3>
           <p>Eliminate unnecessary copies and save space.</p>
         </div>
       </div>
       <div class="card tall">
-        <img src="calender.png" alt="Calendar Icon" />
+        <img src="calender.webp" alt="Calendar Icon" />
         <h3>Declutter your calendar</h3>
         <p>Remove past or duplicate events from your calendar.</p>
       </div>
@@ -330,19 +373,19 @@
 
     <div class="feature-column">
       <div class="card tall">
-        <img src="123.png" alt="Calendar Icon" />
+        <img src="contacts.webp" alt="Calendar Icon" />
         <h3>Merge duplicate contacts</h3>
         <p>Combine contact entries with matching names or numbers.</p>
       </div>
       <div class="card">
-        <img src="compress.png" alt="Feature Icon" />
+        <img src="compress.webp" alt="Feature Icon" />
         <div>
           <h3>Compress your videos</h3>
           <p>Shrink file size without compromising video quality.</p>
         </div>
       </div>
       <div class="card">
-        <img src="email.png" alt="Feature Icon" />
+        <img src="email.webp" alt="Feature Icon" />
         <div>
           <h3>Email cleaner</h3>
           <p>Remove large & useless emails with one powerful tool.
@@ -367,7 +410,9 @@
   </picture>
   <div class="text-overlay">
     <h1>Get the Cleaner AI and make your phone clean & Tidy</h1>
-    <button onclick="window.location.href='https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383'">Get the App</button>
+   <div style="width: 151px;height: 45px;background-color: #ffffff;border-radius: 30px;display: flex;justify-content: center;align-items: center;margin-left: 85px;font-size: 16px;font-weight: 600;">
+           <a href="https://apps.apple.com/in/app/icleaner-clean-up-storage/id6615082383" style="text-decoration: none;color: #000000;">Get the App
+        </div>
   </div>
 </div>
 
@@ -376,9 +421,9 @@
   <footer>
     <div>© 2025 iCleaner. All rights reserved.</div>
     <div>
-      <a href="https://lascade.notion.site/Privacy-Policy-b42ef52535404c48992a6eeba4d6cb35?source=copy_link" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+      <a href="/privacy">Privacy Policy</a>
       |
-      <a href="https://lascade.notion.site/Terms-and-Conditions-593caeb153b645a1a257eb1293be54e8?source=copy_link" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+      <a href="/terms" >Terms & Conditions</a>
     </div>
   </footer>
 </body>
